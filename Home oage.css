@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-position: center;
+    margin-left: 150px;
+    margin-right: 150px;
+   /* background: url("car\ rentals\ image-1.png") no-repeat; */
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    z-index: 99;
+}
+
+.logo{
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+
+
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight:500;
+    margin-left: 40px;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    transform-origin: right;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition:transform .5s;
+}
+
+.navigation a:hover:after{
+    transform-origin: left;
+    transform:scaleX(1);
+
+}
+
+.navigation .btnLogin-popup{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover{
+    background: #fff;
+    color:#162938;
+
+}
+
+
+.heading{
+    text-align: center;
+
+}
+
+.heading span{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.heading h1{
+    font-size: 2rem;
+}
+
+.home{
+    position: relative;
+}
+
+.RentAcar{
+    padding: 10px 20px;
+    background: orange;
+    color: white;
+    border-radius: 0.9rem;
+    font-size: 40px;
+    float: right;
+    margin-top: 300px;
+    margin-right: 250px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.RentAcar:hover{
+        background: blue;
+        color: white;
+}
+
+.ride{
+    position: relative;
+}
+
+
+
+
+.ride-container{
+    /*
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(1500px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+    */
+    width: 100%;
+    overflow: auto;
+
+}
+
+.ride-container .box {
+    /*
+    text-align: center;
+    padding: 20px;*/
+    width: 33%;
+    float: left;
+}
+
+.ride-container .box .bx{
+    font-size: 34px;
+    padding: 10px;
+    background: #eeeff1;
+    border-radius: 0.5em;
+    color: var(--main-color);
+
+}
+
+.ride-container .box h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1.4rem;
+    margin: 1.4rem 0 0.5rem;
+}
+
+
+.ride-container .box .bxs-calendar-star,
+.ride-container .box .bxs-calendar,
+.ride-container .box .bxs-map{
+    background: var(--gradient);
+    color: orange;
+
+}
+
+.ride-container .box .bx:hover{
+    background: lightgray;
+} 
+
+.about{
+    position: relative;
+}
+
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    margin-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.about-img img{
+    width: 100%;
+}
+
+.about-text span{
+    font-weight: 500;
+    color: var(--main-color);
+    text-transform: uppercase;
+
+}
+
+.about-text p {
+    margin: 0.5rem 0 1.4rem;
+}
+
+.about-text .btn{
+    padding: 10px 20px;
+    background: #474fa0;
+    color: white;
+    border-radius: 0.5rem;
+
+}
+
+.about-text .btn:hover{
+    background: orange;
+}
+
+.reviews-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.rev-img{
+   width: 70px;
+   height: 70px; 
+}
+
+.rev-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 55%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid orange;
+}
+
+.reviews-container .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 1px 4px 41px rgba(0, 0 , 0, .1);
+    border-radius: 0.5rem;
+}
+
+.reviews-container .box h2{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+}
+
+.reviews-container .box p{
+    font-style: italic;
+
+}
+
+.reviews-container .box .stars .bx{
+    color: orange;
+}

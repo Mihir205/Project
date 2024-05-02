@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            padding: 25px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        td:hover{
+            background-color: #f2f2f2;
+        }
+        table{
+            margin-top: 75px;
+            border-spacing: 70px;
+            padding-top: 10px;
+        }
+        .navigation a {
+            position: relative;
+            font-size: 1.1em;
+            color: #fff;
+            text-decoration: none;
+            font-weight:500;
+            margin-left: 40px;
+        }
+        .navigation a::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            transform-origin: right;
+            border-radius: 5px;
+            transform: scaleX(0);
+            transition:transform .5s;
+        }
+        .navigation a:hover:after{
+            transform-origin: left;
+            transform:scaleX(1);
+        }
+        .navigation .btnlogin-popup{
+            width: 130px;
+            height: 50px;
+            background: transparent;
+            border: 2px solid #fff;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: #fff;
+            font-weight: 500;
+            margin-left: 40px;
+            transition: .5s;
+        }
+        .navigation .btnlogin-popup:hover{
+            background: #fff;
+            color:#162938;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5%;
+            width: 90%;
+            padding: 20px 100px;
+            background: orange;
+            display: flex;
+            justify-content: space-between;
+            align-items: center ;
+            z-index: 99;
+        }
+        .logo{
+            font-size: 2em;
+            color: #fff;
+            user-select: none;
+        }
+        input[type="submit"] {
+            width: 10%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            margin-left: 650px;
+            margin-bottom: 30px;
+        }
+        input[type="submit"]:hover {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Contact</a>
+            <button class="btnlogin-popup">Login/Sign up</button>
+        </nav>
+    </header>
+    <table align="center">
+        <tr>
+            <td onclick="changeColor(this)" data-clicked="false"><img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/102663/baleno-exterior-right-front-three-quarter-66.jpeg?isig=0&q=80" height="200" width="350"><p>Maruti Baleno<br>xxx</p></td>
+            <td onclick="changeColor(this)" data-clicked="false"><img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/34560/cooper-exterior-right-front-three-quarter-2.jpeg?q=80" height="200" width="350"><p>MINI Cooper<br>xxx</p></td></td>
+            <td onclick="changeColor(this)" data-clicked="false"><img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/141125/kwid-exterior-right-front-three-quarter-3.jpeg?isig=0&q=80" height="200" width="350"><p>Renault Kwid<br>xxx</p></td></td>
+        </tr>
+        <tr>
+            <td onclick="changeColor(this)" data-clicked="false"><img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/150603/i20-exterior-right-front-three-quarter-7.jpeg?isig=0&q=80" height="200" width="350"><p>Hyundai i20<br>xxx</p></td></td>
+            <td onclick="changeColor(this)" data-clicked="false"><img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/32597/altroz-exterior-right-front-three-quarter-80.jpeg?isig=0&q=80" height="200" width="350"><p>Tata Altroz<br>xxx</p></td></td>
+            <td onclick="changeColor(this)" data-clicked="false"><img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/54399/swift-exterior-right-front-three-quarter-64.jpeg?isig=0&q=80" height="200" width="350"><p>Maruti Swift<br>xxx</p></td></td>
+        </tr>
+    </table>
+    <input type="submit" value="Confirm Booking">
+    <script>
+        function changeColor(td) {
+            var cells = document.getElementsByTagName('td');
+            for (var i = 0; i < cells.length; i++) {
+                cells[i].style.backgroundColor = 'white';
+                cells[i].setAttribute('data-clicked', 'false');
+            }
+            td.style.backgroundColor = 'orange';
+            td.setAttribute('data-clicked', 'true');
+        }
+    </script>
+</body>
+</html>
