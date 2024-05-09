@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <link rel="stylesheet" href="register page.css">
+    <link rel="stylesheet" href="registerpage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <title>Document</title>
 </head>
@@ -49,16 +50,21 @@
                 </div>
                 <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" required>
+                        <input type="password"  id="password" required>
                         <label>Password</label>
                 </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password"  id="confirm_password" required>
+                    <label>Confirm Password</label>
+            </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox">I agree to the terms & conditions</label>
                     
                 </div>
                 <button type="submit" class="btn">Register</button>
                 <div class="login-register">
-                    <p>Already have an account? <a href="#" class="register-link">Register</a></p>
+                    <p>Already have an account? <a href="#" class="register-link">Login</a></p>
                 </div>
             </form>
         </div>
@@ -71,5 +77,18 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <script>var password = document.getElementById("password")
+        , confirm_password = document.getElementById("confirm_password");
+      
+      function validatePassword(){
+        if(password.value != confirm_password.value) {
+          confirm_password.setCustomValidity("Passwords Don't Match");
+        } else {
+          confirm_password.setCustomValidity('');
+        }
+      }
+      
+      password.onchange = validatePassword;
+      confirm_password.onkeyup = validatePassword;</script>
 </body>
 </html>
